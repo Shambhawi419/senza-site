@@ -89,7 +89,7 @@ export default function Hero() {
             <span key={i} className={styles.wordMask}>
               <span className={styles.word}>
                 {w.em ? <em>{w.text}</em> : w.text}
-              </span>{" "}
+              </span>
             </span>
           ))}
         </h1>
