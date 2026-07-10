@@ -1,0 +1,92 @@
+.footer {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(3.5rem, 8vh, 6rem) 2.5rem;
+  background: var(--bg);
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: clamp(3rem, 7vh, 5rem);
+}
+
+.big {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-block: clamp(2.5rem, 6vh, 4rem);
+}
+
+.brand {
+  font-family: var(--font-serif), serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.brand em {
+  color: var(--accent);
+  font-style: italic;
+}
+.brand span {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+
+.note {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 32ch;
+  font-size: 0.95rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.col a {
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+  width: fit-content;
+}
+.col a:hover {
+  color: var(--fg);
+}
+
+.colHead {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.4rem;
+}
+
+.legal {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--faint);
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
