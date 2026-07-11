@@ -24,6 +24,9 @@ export default function SmoothScroll({
       smoothWheel: true,
     });
 
+    // Expose so the Nav can pause scrolling while the mobile drawer is open.
+    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
+
     lenis.on("scroll", ScrollTrigger.update);
 
     const raf = (time: number) => {
@@ -34,6 +37,7 @@ export default function SmoothScroll({
 
     return () => {
       gsap.ticker.remove(raf);
+      delete (window as unknown as { __lenis?: Lenis }).__lenis;
       lenis.destroy();
     };
   }, []);

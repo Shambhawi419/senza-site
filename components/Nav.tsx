@@ -22,6 +22,21 @@ export default function Nav() {
     setOpen(false);
   }, [pathname]);
 
+  // Lock page scroll while the mobile drawer is open. Lenis drives the
+  // scroll programmatically, so it must be stopped too — overflow:hidden
+  // alone doesn't stop it.
+  useEffect(() => {
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } })
+      .__lenis;
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    if (open) lenis?.stop();
+    else lenis?.start();
+    return () => {
+      document.documentElement.style.overflow = "";
+      lenis?.start();
+    };
+  }, [open]);
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>

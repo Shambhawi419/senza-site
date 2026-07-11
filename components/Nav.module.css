@@ -4,15 +4,30 @@
   left: 0;
   right: 0;
   z-index: 50;
-  transition: background 0.5s var(--ease), backdrop-filter 0.5s var(--ease),
-    border-color 0.5s var(--ease);
+  transition: border-color 0.5s var(--ease);
   border-bottom: 1px solid transparent;
 }
 
-.scrolled {
+/* Blur lives on a pseudo-element layer, NOT the header itself: a
+   backdrop-filter on an ancestor re-anchors position:fixed children,
+   which broke the mobile drawer after scrolling. */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(10, 9, 8, 0.72);
   backdrop-filter: blur(14px) saturate(1.2);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+}
+
+.scrolled {
   border-bottom-color: var(--line);
+}
+
+.scrolled::before {
+  opacity: 1;
 }
 
 .inner {
