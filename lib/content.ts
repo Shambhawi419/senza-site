@@ -126,7 +126,7 @@ export const testimonials = [
     quote:
       "We get close to 30 calls a day, and at least five of them used to go unanswered, every single day. Since Senza AI took over our phones, nearly 150 calls a month now convert into appointments, and their outbound campaigns keep our patients coming back. Revenue is up almost 18%.",
     name: "Dr. Satish Kumar",
-    role: "Amrit Hospital · Muzaffarpur, Bihar",
+    role: "Mediwell Hospital · Muzaffarpur, Bihar",
     tag: "Healthcare",
     featured: true,
   },
