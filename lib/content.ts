@@ -124,9 +124,9 @@ export const pillars = [
 export const testimonials = [
   {
     quote:
-      "We used to miss nearly 30% of incoming calls after 6 PM. Since deploying Senza AI, every call is answered, every appointment is booked. Our front desk staff now focus entirely on in-person patients, and morale has never been better.",
-    name: "Dr. Rohan Mehta",
-    role: "Director, Mehta Family Clinic · Mumbai",
+      "We get close to 30 calls a day, and at least five of them used to go unanswered, every single day. Since Senza AI took over our phones, nearly 150 calls a month now convert into appointments, and their outbound campaigns keep our patients coming back. Revenue is up almost 18%.",
+    name: "Dr. Satish Kumar",
+    role: "Amrit Hospital · Muzaffarpur, Bihar",
     tag: "Healthcare",
     featured: true,
   },
